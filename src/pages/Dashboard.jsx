@@ -96,12 +96,14 @@ export default function Dashboard(){
 
   const kpis=[
     {v:total,l:"Kontaktu",s:"celkem v CRM",c:"#3D8EFF"},
-    {v:velke,l:"Velke ryby",s:Math.round(velke/total*100)+"% z celku",c:"#00E5A0"},
-    {v:aktivni,l:"Aktivni zajem",s:"zajem + nabidka",c:"#7B5CFF"},
-    {v:0,l:"Uzavreno",s:"finalni dealy",c:"#00E5A0"},
-    {v:avgScore,l:"Avg. score",s:"z 10 bodu",c:"#FFB020"},
-    {v:0,l:"Follow-up dnes",s:"zadne dnes",c:"#454D63"},
-  ]
+  {v:velke,l:"Velke ryby",s:Math.round(velke/total*100)+"% z celku",c:"#00E5A0"},
+  {v:aktivni,l:"Aktivni zajem",s:"zajem + nabidka",c:"#7B5CFF"},
+  {v:0,l:"Uzavreno",s:"finalni dealy",c:"#00E5A0"},
+  {v:"$0",l:"Revenue dnes",s:"uzavrene dnes",c:"#00E5A0"},
+  {v:"$0",l:"Revenue tyden",s:"tento tyden",c:"#FFB020"},
+  {v:(DATA.reduce((s,d)=>s+d.score,0)/total).toFixed(1),l:"Avg. score",s:"z 10 bodu",c:"#FFB020"},
+  {v:0,l:"Follow-up dnes",s:"zadne dnes",c:"#454D63"},
+]
 
   const srt=k=>{if(sortK===k)setSortD(d=>d*-1);else{setSortK(k);setSortD(1)}}
   const arr=k=>sortK===k?(sortD===1?" v":" ^"):""
@@ -117,7 +119,7 @@ export default function Dashboard(){
         <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Hledat zakaznika..." style={{...sel,width:210}}/>
       </div>
 
-      <div style={{display:"grid",gridTemplateColumns:"repeat(6,1fr)",gap:12,marginBottom:24}}>
+      <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:12,marginBottom:24}}>
         {kpis.map((k,i)=>(
           <div key={i} style={{background:"var(--bg2)",border:"1px solid var(--border2)",borderRadius:12,padding:"16px 18px",position:"relative",overflow:"hidden"}}>
             <div style={{position:"absolute",top:0,left:0,right:0,height:2,background:k.c,borderRadius:"12px 12px 0 0"}}/>
