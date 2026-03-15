@@ -1,0 +1,28 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: #0D0E14;
+  color: #ECEEF5;
+}
+
+:root {
+  --bg: #0D0E14;
+  --bg2: #13151E;
+  --bg3: #181C27;
+  --bg4: #1E2230;
+  --green: #00E5A0;
+  --green2: #00C484;
+  --blue: #3D8EFF;
+  --purple: #7B5CFF;
+  --amber: #FFB020;
+  --red: #FF4D6A;
+  --text: #ECEEF5;
+  --text2: #7B8399;
+  --text3: #454D63;
+  --border: rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.1);
+}
+
+button { cursor: pointer; font-family: inherit; }
+input, select { font-family: inherit; }
