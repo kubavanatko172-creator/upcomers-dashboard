@@ -40,7 +40,17 @@ function App() {
         {page==='team' && <Team/>}
         {page==='calllog' && <CallLog/>}
       </main>
-    </div>
+      <footer style={{
+  textAlign: 'center',
+  padding: '20px',
+  borderTop: '1px solid var(--border)',
+  color: 'var(--text3)',
+  fontSize: 12,
+  fontFamily: 'monospace'
+}}>
+  Jakub Vanatko · Project 8 · Upcomers.com Sales System
+</footer>
+    </div> 
   )
 }
 export default App
