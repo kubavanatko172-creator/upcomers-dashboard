@@ -18,7 +18,7 @@ function App() {
       <nav style={{background:'var(--bg2)',borderBottom:'1px solid var(--border2)',padding:'0 28px',height:'56px',display:'flex',alignItems:'center',justifyContent:'space-between',position:'sticky',top:0,zIndex:100}}>
         <div style={{display:'flex',alignItems:'center',gap:10}}>
           <div style={{width:30,height:30,borderRadius:8,background:'var(--green)',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,fontSize:14,color:'#000'}}>U</div>
-          <span style={{fontWeight:700,fontSize:15}}>Upcomers<span style={{color:'var(--green)'}}>.com</span></span>
+          <span style={{fontWeight:700,fontSize:15}}>Sales Dashboard <span style={{ color: 'var(--green)' }}>v8</span></span>
         </div>
         <div style={{display:'flex',gap:4}}>
           {tabs.map(t => (
